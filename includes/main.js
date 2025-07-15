@@ -275,9 +275,17 @@ const testimonialSwiper = new Swiper(".testimonialsSwiper", {
     }
 });
 
-
-
-
+    // Loading page // ----------------------- //
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        let e = document.querySelector(".loading");
+        (e.style.transition = "opacity 4s"),
+            (e.style.opacity = 0),
+            setTimeout(function () {
+                e.style.display = "none";
+            }, 4e3);
+    }, 100);
+})
 
 
 
