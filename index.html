@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="includes/images/logo-scroll.png" type="image/x-icon">
+    <link rel="shortcut icon" href="includes/images/logo-icon.png">
     <link rel="stylesheet" href="includes/css/bootstrap.min.css">
     <link rel="stylesheet" href="includes/fonts/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -64,10 +64,10 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About Us
-                            <i class="fa-solid fa-caret-down"></i>
+                        <a class="nav-link" href="about-us.html" role="button" aria-expanded="false">
+                            About Us <i class="fa-solid fa-caret-down"></i>
                         </a>
+
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item" href="who-we-are.html">Who we are</a>
@@ -87,7 +87,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">
                             Services
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
@@ -110,7 +110,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">
                             Partners
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
@@ -133,7 +133,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">
                             Resources
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
@@ -1009,95 +1009,57 @@
     <!-- testimonials-section  -->
 
 
+ 
+
+
     <footer class="footer-black">
         <div class="container">
-            <div class="row">
-                <!-- <div class="col-lg-4">
-                    <div class="footer-bg">
-                        <div class="footer-address">
-                            <img src="includes/images/logo-footer.png" class="logo-footer" alt="">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt aut iure
-                                tenetur incidunt repellat quaerat possimus unde. Quibusdam nihil asperiores dolor labore
-                                exercitationem, deserunt nostrum vero corrupti quae ex?
-                            </p>
-                        </div>
-                    </div>
-                </div> -->
+            <div class="row gy-4 justify-content-between">
 
-                <div class="col-lg-2">
+                <!-- About Us Section -->
+                <div class="col-lg-2 accordion-footer">
                     <div class="footer-link">
-                        <h3>About Us</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="who-we-are.html">Who We Are</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-vision.html">Our Vission</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-mission.html">Our Mission</a>
-                            </li>
+                        <h3 class="accordion-header">About Us</h3>
+                        <ul class="accordion-content">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2">
+
+                <!-- Services Section -->
+                <div class="col-lg-2 accordion-footer">
                     <div class="footer-link">
-                        <h3>Services</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="who-we-are.html">Who We Are</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-vision.html">Our Vission</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-mission.html">Our Mission</a>
-                            </li>
+                        <h3 class="accordion-header">Services</h3>
+                        <ul class="accordion-content">
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Development</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2">
+
+                <!-- Partners Section -->
+                <div class="col-lg-2 accordion-footer">
                     <div class="footer-link">
-                        <h3>Partners</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="who-we-are.html">Who We Are</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-vision.html">Our Vission</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-mission.html">Our Mission</a>
-                            </li>
+                        <h3 class="accordion-header">Partners</h3>
+                        <ul class="accordion-content">
+                            <li><a href="#">Agencies</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                            <li><a href="#">Sponsors</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2">
+
+                <!-- Resources Section -->
+                <div class="col-lg-2 accordion-footer">
                     <div class="footer-link">
-                        <h3>Resources</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="who-we-are.html">Who We Are</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-vision.html">Our Vission</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-chevron-right"></i>
-                                <a href="our-mission.html">Our Mission</a>
-                            </li>
+                        <h3 class="accordion-header">Resources</h3>
+                        <ul class="accordion-content">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Docs</a></li>
+                            <li><a href="#">Support</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1132,17 +1094,17 @@
                         <a title="instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid lastFooter">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright">
-                        2025 © Copyright
-                        <strong>
-                            <span>Lemon Byte</span>
-                        </strong>
-                        All Rights Reserved
+                <div class="container-fluid lastFooter">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright">
+                                2025 © Copyright
+                                <strong>
+                                    <span>Lemon Byte</span>
+                                </strong>
+                                All Rights Reserved
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

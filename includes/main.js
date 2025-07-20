@@ -144,6 +144,34 @@ window.addEventListener("scroll", () => {
 
 // Progress bar 
 
+// const circle = document.getElementById("indicatorCircle");
+// const percentText = document.getElementById("scrollPercentText");
+// const scrollToTopBtn = document.getElementById("progressCircle");
+
+// const radius = 26;
+// const circumference = 2 * Math.PI * radius;
+
+// circle.style.strokeDasharray = `${circumference}`;
+// circle.style.strokeDashoffset = `${circumference}`;
+
+// function updateProgress() {
+//     const scrollTop = window.scrollY;
+//     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+//     const percent = scrollTop / scrollHeight;
+//     const offset = circumference * (1 - percent);
+
+//     circle.style.strokeDashoffset = offset;
+//     percentText.textContent = `${Math.round(percent * 100)}%`;
+// }
+
+
+// window.addEventListener("scroll", updateProgress);
+
+// scrollToTopBtn.addEventListener("click", () => {
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+// });
+
+
 const circle = document.getElementById("indicatorCircle");
 const percentText = document.getElementById("scrollPercentText");
 const scrollToTopBtn = document.getElementById("progressCircle");
@@ -161,9 +189,15 @@ function updateProgress() {
     const offset = circumference * (1 - percent);
 
     circle.style.strokeDashoffset = offset;
-    percentText.textContent = `${Math.round(percent * 100)}%`;
-}
 
+    const percentage = Math.round(percent * 100);
+
+    if (percentage >= 100) {
+        percentText.innerHTML = '<i class="fa-solid fa-angle-up fs-4 text-warning"></i>';
+    } else {
+        percentText.textContent = `${percentage}%`;
+    }
+}
 
 window.addEventListener("scroll", updateProgress);
 
@@ -172,14 +206,13 @@ scrollToTopBtn.addEventListener("click", () => {
 });
 
 
-
 // change logo 
 
 const logo = document.getElementById("siteLogo");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
-        logo.src = "includes/images/logo-icon.jpg";
+        logo.src = "includes/images/logo-icon.png";
     } else {
         logo.src = "includes/images/logo.png";
     }
@@ -275,7 +308,7 @@ const testimonialSwiper = new Swiper(".testimonialsSwiper", {
     }
 });
 
-    // Loading page // ----------------------- //
+// Loading page // ----------------------- //
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         let e = document.querySelector(".loading");
@@ -291,4 +324,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownLinks = document.querySelectorAll('.navbar .dropdown > a');
+
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const isMobile = window.innerWidth < 992;
+
+            if (isMobile) {
+                e.preventDefault(); // امنع فتح الصفحة
+
+                const alreadyOpen = this.classList.contains('open');
+
+                // اغلق أي قائمة تانية
+                document.querySelectorAll('.navbar .dropdown > a.open').forEach(el => {
+                    el.classList.remove('open');
+                    el.nextElementSibling?.classList.remove('show');
+                });
+
+                // لو مش مفتوحة بالفعل، افتحها
+                if (!alreadyOpen) {
+                    this.classList.add('open');
+                    this.nextElementSibling?.classList.add('show');
+                }
+            }
+            // أما لو ديسكتوب، متعملش أي حاجة وسيب الرابط يفتح عادي
+        });
+    });
+
+    // اقفل القوائم عند توسيع الشاشة
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) {
+            document.querySelectorAll('.navbar .dropdown > a.open').forEach(el => {
+                el.classList.remove('open');
+                el.nextElementSibling?.classList.remove('show');
+            });
+        }
+    });
+});
+
+
+
+
+
 AOS.init();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionHeaders = document.querySelectorAll(".accordion-footer .accordion-header");
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener("click", function () {
+            const parent = header.closest(".accordion-footer");
+            parent.classList.toggle("active");
+        });
+    });
+});
+
