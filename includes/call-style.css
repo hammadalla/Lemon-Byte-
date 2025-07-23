@@ -1546,7 +1546,7 @@ ul li {
     text-decoration: underline;
 }
 
-.copyright-link:last-child::after{
+.copyright-link:last-child::after {
     background: transparent;
     height: 0px;
 }
@@ -1838,16 +1838,9 @@ ul li {
     text-decoration: none;
     border: 2px solid #FCD935;
     border-radius: 30px;
+    background: #FCD935;
     /* background: linear-gradient(135deg, #FFD700, #FFB300); */
-    background: linear-gradient(135deg,
-            #FCD935 0%,
-            /* الأصفر - لون أساسي لافت */
-            #ffffff 40%,
-            /* الأبيض - يعطي لمعة */
-            #ffff66 100%
-            /* الفضي - يعطي بعد ولمسة أنيقة */
-        );
-    color: var(--black-color);
+    color: var(--white-color);
     transition: color 0.5s;
     z-index: 1;
     -webkit-animation: fadeUp 2s 1s ease-in-out forwards;
