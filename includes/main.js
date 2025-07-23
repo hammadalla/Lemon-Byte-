@@ -1,57 +1,57 @@
 
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorBorder = document.querySelector(".cursor-border");
+// const cursorDot = document.querySelector(".cursor-dot");
+// const cursorBorder = document.querySelector(".cursor-border");
 
-let mouseX = 0, mouseY = 0;
-let borderX = 0, borderY = 0;
+// let mouseX = 0, mouseY = 0;
+// let borderX = 0, borderY = 0;
 
-document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+// document.addEventListener("mousemove", (e) => {
+//     mouseX = e.clientX;
+//     mouseY = e.clientY;
 
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-});
+//     cursorDot.style.left = `${mouseX}px`;
+//     cursorDot.style.top = `${mouseY}px`;
+// });
 
-function animateCursor() {
-    borderX += (mouseX - borderX) * 0.1;
-    borderY += (mouseY - borderY) * 0.1;
+// function animateCursor() {
+//     borderX += (mouseX - borderX) * 0.1;
+//     borderY += (mouseY - borderY) * 0.1;
 
-    cursorBorder.style.left = `${borderX}px`;
-    cursorBorder.style.top = `${borderY}px`;
+//     cursorBorder.style.left = `${borderX}px`;
+//     cursorBorder.style.top = `${borderY}px`;
 
-    requestAnimationFrame(animateCursor);
-}
+//     requestAnimationFrame(animateCursor);
+// }
 
-animateCursor();
+// animateCursor();
 
-// تأثير الضغط
-document.addEventListener("mousedown", () => {
-    cursorDot.classList.add("active");
-    cursorBorder.style.width = "70px";
-    cursorBorder.style.height = "70px";
-});
+// // تأثير الضغط
+// document.addEventListener("mousedown", () => {
+//     cursorDot.classList.add("active");
+//     cursorBorder.style.width = "70px";
+//     cursorBorder.style.height = "70px";
+// });
 
-document.addEventListener("mouseup", () => {
-    cursorDot.classList.remove("active");
-    cursorBorder.style.width = "50px";
-    cursorBorder.style.height = "50px";
-});
+// document.addEventListener("mouseup", () => {
+//     cursorDot.classList.remove("active");
+//     cursorBorder.style.width = "50px";
+//     cursorBorder.style.height = "50px";
+// });
 
-// عند المرور فوق عناصر قابلة للنقر
-const hoverTargets = ['a', 'button', 'input', 'textarea', '[data-hover]'];
+// // عند المرور فوق عناصر قابلة للنقر
+// const hoverTargets = ['a', 'button', 'input', 'textarea', '[data-hover]'];
 
-document.addEventListener("mouseover", (e) => {
-    if (hoverTargets.some(sel => e.target.matches(sel))) {
-        cursorBorder.classList.add("hover");
-    }
-});
+// document.addEventListener("mouseover", (e) => {
+//     if (hoverTargets.some(sel => e.target.matches(sel))) {
+//         cursorBorder.classList.add("hover");
+//     }
+// });
 
-document.addEventListener("mouseout", (e) => {
-    if (hoverTargets.some(sel => e.target.matches(sel))) {
-        cursorBorder.classList.remove("hover");
-    }
-});
+// document.addEventListener("mouseout", (e) => {
+//     if (hoverTargets.some(sel => e.target.matches(sel))) {
+//         cursorBorder.classList.remove("hover");
+//     }
+// });
 
 
 
