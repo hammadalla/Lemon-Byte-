@@ -222,91 +222,21 @@ window.addEventListener("scroll", () => {
 
 // partnersSwiper 
 
-const swiper = new Swiper(".partnersSwiper", {
-    slidesPerView: 5,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        320: { slidesPerView: 3 },
-        640: { slidesPerView: 3 },
-        1000: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 },
+
+const currentPage = window.location.pathname.split("/").pop(); // مثال: seo.html
+
+// كل اللينكات
+const links = document.querySelectorAll(".service-item");
+
+links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
     }
 });
 
-const counters = document.querySelectorAll('.counter');
-
-const startCounters = () => {
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const originalText = counter.innerText;
-
-        // لو مفيش data-target (زي 24/7) متعملش عد
-        if (!target || isNaN(target)) return;
-
-        let count = 0;
-        const duration = 3000; // ابطأ شوية
-        const steps = 100;
-        const increment = target / steps;
-
-        // هل الرقم فيه علامة زي + أو %
-        const hasPlus = originalText.includes('+');
-        const hasPercent = originalText.includes('%');
-
-        const updateCounter = () => {
-            if (count < target) {
-                count += increment;
-                let display = Math.ceil(count);
-                if (hasPlus) display += '+';
-                if (hasPercent) display += '%';
-                counter.innerText = display;
-                setTimeout(updateCounter, duration / steps);
-            } else {
-                let display = target;
-                if (hasPlus) display += '+';
-                if (hasPercent) display += '%';
-                counter.innerText = display;
-            }
-        };
-
-        updateCounter();
-    });
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            startCounters();
-            observer.disconnect(); // مرة واحدة بس
-        }
-    });
-});
-
-observer.observe(document.querySelector('.stats-section'));
 
 
 
-const testimonialSwiper = new Swiper(".testimonialsSwiper", {
-    loop: true,
-    spaceBetween: 30,
-    slidesPerView: 1,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next-custom",
-        prevEl: ".swiper-button-prev-custom",
-    },
-    breakpoints: {
-        768: { slidesPerView: 1 },
-        992: { slidesPerView: 1 }
-    }
-});
 
 // Loading page // ----------------------- //
 document.addEventListener("DOMContentLoaded", function () {

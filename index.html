@@ -49,7 +49,7 @@
         </div>
     </div>
     <nav class="navbar shadow-sm navbar-expand-lg" id="navbar">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="includes/images/logo.png" id="siteLogo" class="logo" alt="logo" loading="lazy">
             </a>
@@ -64,7 +64,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="about-us.html" role="button" aria-expanded="false">
+                        <a class="nav-link" href="aboutus.html" role="button" aria-expanded="false">
                             About Us <i class="fa-solid fa-caret-down"></i>
                         </a>
 
@@ -87,81 +87,78 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">
+                        <a class="nav-link" href="services.html" role="button" aria-expanded="false">
                             Services
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="who-we-are.html">Who we are</a>
+                                <a class="dropdown-item" href="WebSite-Development.html">WebSite Development & Design</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="our-vision.html">Our vision</a>
+                                <a class="dropdown-item" href="WebSite-Development.html">SEO (Search Engine Optimization)</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="our-mission.html">Our mission</a>
+                                <a class="dropdown-item" href="WebSite-Development.html">Digital Marketing Strategy</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="leader-message.html">The Leader's Message</a>
+                                <a class="dropdown-item" href="WebSite-Development.html">CRO Conversion Rate Optimization</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="group-companies.html">Group's Companies</a>
+                                <a class="dropdown-item" href="WebSite-Development.html">CRM & Marketing Automation</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="WebSite-Development.html">Performance Marketing (Paid Ads)</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">
+                        <a class="nav-link" href="partner.html" role="button" aria-expanded="false">
                             Partners
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="who-we-are.html">Who we are</a>
+                                <a class="dropdown-item" href="our-network.html">Our Network</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="our-vision.html">Our vision</a>
+                                <a class="dropdown-item" href="prtner-with-us.html">Partner With Us</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="our-mission.html">Our mission</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="leader-message.html">The Leader's Message</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="group-companies.html">Group's Companies</a>
+                                <a class="dropdown-item" href="Collaborator-Stories.html">Collaborator Stories </a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">
+                        <a class="nav-link" href="resources.html" role="button" aria-expanded="false">
                             Resources
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="who-we-are.html">Who we are</a>
+                                <a class="dropdown-item" href="blog.html">Blog</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="our-vision.html">Our vision</a>
+                                <a class="dropdown-item" href="our-vision.html">Case Studies</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="our-mission.html">Our mission</a>
+                                <a class="dropdown-item" href="our-mission.html">Guides & play book</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="leader-message.html">The Leader's Message</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="group-companies.html">Group's Companies</a>
+                                <a class="dropdown-item" href="leader-message.html">Tool Stack</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        <a class="nav-link" href="career.html">Talent Portal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="button" href="#">
+                        <a class="button" href="contactus.html">
                             Get A Quote
                         </a>
                     </li>
@@ -1108,7 +1105,7 @@
                         <div class="col-lg-6">
                             <div class="copyright">
                                 <a href="#" class="copyright-link">
-                                    Legal 
+                                    Legal
                                 </a>
                                 <a href="#" class="copyright-link">
                                     Terms of Use
@@ -1169,6 +1166,95 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="includes/main.js"></script>
+    <script>
+        const swiper = new Swiper(".partnersSwiper", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: { slidesPerView: 3 },
+                640: { slidesPerView: 3 },
+                1000: { slidesPerView: 3 },
+                1200: { slidesPerView: 4 },
+            }
+        });
+
+    </script>
+
+    <script>
+        const testimonialSwiper = new Swiper(".testimonialsSwiper", {
+            loop: true,
+            spaceBetween: 30,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next-custom",
+                prevEl: ".swiper-button-prev-custom",
+            },
+            breakpoints: {
+                768: { slidesPerView: 1 },
+                992: { slidesPerView: 1 }
+            }
+        });
+    </script>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const originalText = counter.innerText;
+
+                // لو مفيش data-target (زي 24/7) متعملش عد
+                if (!target || isNaN(target)) return;
+
+                let count = 0;
+                const duration = 3000; // ابطأ شوية
+                const steps = 100;
+                const increment = target / steps;
+
+                // هل الرقم فيه علامة زي + أو %
+                const hasPlus = originalText.includes('+');
+                const hasPercent = originalText.includes('%');
+
+                const updateCounter = () => {
+                    if (count < target) {
+                        count += increment;
+                        let display = Math.ceil(count);
+                        if (hasPlus) display += '+';
+                        if (hasPercent) display += '%';
+                        counter.innerText = display;
+                        setTimeout(updateCounter, duration / steps);
+                    } else {
+                        let display = target;
+                        if (hasPlus) display += '+';
+                        if (hasPercent) display += '%';
+                        counter.innerText = display;
+                    }
+                };
+
+                updateCounter();
+            });
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.disconnect(); // مرة واحدة بس
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.stats-section'));
+    </script>
 
 </body>
 
