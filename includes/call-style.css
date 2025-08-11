@@ -2026,7 +2026,7 @@ ul li {
 
 .contact_info_sec {
     position: absolute;
-    background-color: var(--yellow-color);
+    background-color: #FFC107;
     right: 1px;
     top: 18%;
     min-height: 340px;
